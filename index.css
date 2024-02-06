@@ -1,0 +1,30 @@
+body{
+    color: black;
+    background-image: url(img/_methode_times_prod_web_bin_7c4d6e24-1a32-11ec-95b9-6429167b0259.jpg), url(img/Capture-d’écran-2018-10-02-à-09.39.29.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    display: inline;
+    background-size: cover;
+}
+form {
+    display: inline;
+    text-align: center;
+    justify-content: center;
+    margin-top: 50%;
+
+}
+.input{
+    margin-top: 400px;
+}
+input {
+    margin: 10px;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #130202;
+    color: white;
+    border-radius: 10%;
+    padding: 10px;
+}

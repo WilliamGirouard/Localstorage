@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="fonction.js"></script>
+  </head>
+  <body>
+    <form>
+      <div class="input">
+        <input type="text" id="name" name="local" />
+        <input type="password" id="password" name="local" />
+      </div>
+      <div class="button">
+        <button onclick="saveLocal()">Enregistrer dans local Storage</button>
+        <button onclick="saveSession()">
+          Enregistrer dans Session Storage
+        </button>
+        <button onclick="restaurer()">Restaurer de local Storage</button>
+      </div>
+    </form>
+  </body>
+</html>
