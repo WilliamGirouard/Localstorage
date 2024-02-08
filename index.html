@@ -3,12 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Todo List</title>
     <link rel="stylesheet" href="index.css" />
-    <script src="fonction.js"></script>
   </head>
   <body>
     <form>
+      <div class="container">
+        <h1>Ma liste de tâches</h1>
+        <input type="text" id="taskInput" placeholder="Nouvelle tâche...">
+        <button id="addTaskBtn">Ajouter</button>
+        <ul id="taskList"></ul>
+      </div>
       <div class="input">
         <input type="text" id="name" name="local" />
         <input type="password" id="password" name="local" />
@@ -21,5 +26,6 @@
         <button onclick="restaurer()">Restaurer de local Storage</button>
       </div>
     </form>
+    <script src="fonction.js"></script>
   </body>
 </html>

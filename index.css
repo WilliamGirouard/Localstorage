@@ -1,6 +1,7 @@
 body{
     color: black;
     background-image: url(img/_methode_times_prod_web_bin_7c4d6e24-1a32-11ec-95b9-6429167b0259.jpg), url(img/Capture-d’écran-2018-10-02-à-09.39.29.png);
+    font-family: Arial, Helvetica, sans-serif;
     background-position: center;
     background-repeat: no-repeat;
     margin: 0;
@@ -8,6 +9,14 @@ body{
     background-size: cover;
     background-blend-mode: overlay;
     background-attachment: fixed;
+}
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
 }
 form {
     display: inline;
