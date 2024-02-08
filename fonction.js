@@ -18,12 +18,15 @@ function restaurer() {
     const password = localStorage.getItem('password');
     console.log('Password: ', password);
 }
-const taskInput = document.getElementById('taksInput');
+const taskInput = document.getElementById('taskInput');
 const addTaskBtn = document.getElementById('addTaskBtn');
 const taskList = document.getElementById('taskList');
+var task = "task";
+var i = 0;
 
 addTaskBtn.addEventListener("click", addTask);
-function ajoutTache() {
+
+function addTask() {
     const taskText = taskInput.value.trim();
     if (taskText !== "") {
         const listItem = document.createElement('li');
@@ -39,8 +42,48 @@ function ajoutTache() {
         deleteBtn.addEventListener("click", () => {
             listItem.remove();
         });
+        //Ajout d'un bouton de tâche finit
+        const validerBtn = document.createElement('button')
+        validerBtn.textContent = "Tâche fini"
+        listItem.appendChild(validerBtn);
+        //Ajout de l'evenement du bouton finit
+        validerBtn.addEventListener("click", () => {
+            const terminer = document.createElement('p');
+            terminer.innerHTML = "Tâche terminer";
+            terminer.style.color = "green";
+            listItem.appendChild(terminer);
+            
+        });
+        // Création du boutton de modification
+        const modifyBtn = document.createElement('button');
+        modifyBtn.textContent = "Modifier la tâche";
+        listItem.appendChild(modifyBtn);
+        //Ajout de l'evenement du bouton de modification
+        modifyBtn.addEventListener("click", () => {
+            const inputModification = document.createElement('input');
+            inputModification.setAttribute("type", "text");
+            listItem.appendChild(inputModification);
+            //Ajout bouton de validation
+            const validerModifBtn = document.createElement('button');
+            validerModifBtn.textContent = "Valider votre modification";
+            listItem.appendChild(validerModifBtn);
+            //Ajout du bouton de validation des modifications
+            validerModifBtn.addEventListener("click", () => {
+                //Prendre la value de la modification
+                const valueModif = inputModification.value;
+                if (valueModif !== "") {
+                    taskInput = valueModif;
+                    inputModification.remove();
+                } else {
+                    alert("Veuillez entrer une modification valide.");
+                }});
+        });
+
     } else {
-        alert("Veuillez entrer une tâche valide.")
+        alert("Veuillez entrer une tâche valide.");
     }
+    localStorage.setItem(task.concat(i), taskText);
+    i++;
  
 }
+
