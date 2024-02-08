@@ -6,6 +6,8 @@ body{
     margin: 0;
     display: inline;
     background-size: cover;
+    background-blend-mode: overlay;
+    background-attachment: fixed;
 }
 form {
     display: inline;
