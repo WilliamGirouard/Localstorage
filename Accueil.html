@@ -1,17 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo List</title>
-</head>
-<body>
-    <div class="container">
-        <h1>Ma liste de tâches</h1>
-        <input type="text" id="taskInput" placeholder="Nouvelle tâche...">
-        <button id="addTaskBtn">Ajouter</button>
-        <ul id="taskList"></ul>
+    <link rel="stylesheet" href="Accueil.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  </head>
+  <body>
+    <div
+      class="w3-sidebar w3-bar-block w3-card w3-animate-left"
+      style="display: none"
+      id="mySidebar"
+    >
+      <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">
+        Close &times;
+      </button>
+      <a href="#" class="w3-bar-item w3-button">Accueil</a>
+      <a href="index.html" class="w3-bar-item w3-button">Login</a>
+    </div>
+
+    <div class="w3-teal">
+      <button
+        id="openNav"
+        class="w3-button w3-teal w3-xlarge"
+        onclick="w3_open()"
+      >
+        &#9776;
+      </button>
+      <div class="w3-container">
+        <h1>Ma page</h1>
       </div>
-      <script src="fonction.js"></script>
-</body>
+    </div>
+    <div class="container">
+      <h1>Ma liste de tâches</h1>
+      <input
+        type="text"
+        id="taskInput"
+        placeholder="Nouvelle tâche..."
+        maxlength="20"
+      />
+      <button id="addTaskBtn">Ajouter</button>
+      <ul id="taskList"></ul>
+    </div>
+    <script src="fonction.js"></script>
+    <article></article>
+    <aside></aside>
+    <footer></footer>
+  </body>
 </html>
