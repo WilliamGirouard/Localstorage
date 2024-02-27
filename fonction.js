@@ -31,8 +31,6 @@ function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
 }
 
-addTaskBtn.addEventListener("click", addTask);
-
 function addTask() {
   const taskText = taskInput.value.trim();
   if (taskText !== "") {
@@ -61,30 +59,23 @@ function addTask() {
     const modifyBtn = document.createElement("button");
     modifyBtn.textContent = "Modifier la tâche";
     listItem.appendChild(modifyBtn);
-    //Ajout de l'evenement du bouton de modification
-    modifyBtn.addEventListener("click", () => {
-      const inputModification = document.createElement("input");
-      inputModification.setAttribute("type", "text");
-      inputModification.setAttribute("maxlength", "25");
-      listItem.appendChild(inputModification);
-      //Ajout bouton de validation
-      const validerModifBtn = document.createElement("button");
-      validerModifBtn.textContent = "Valider votre modification";
-      listItem.appendChild(validerModifBtn);
-      //Ajout du bouton de validation des modifications
-      validerModifBtn.addEventListener("click", () => {
-        //Prendre la value de la modification
-        const valueModif = inputModification.value.trim();
-        if (valueModif !== "") {
-          listItem.textContent = valueModif;
-        } else {
-          alert("Veuillez entrer une modification valide.");
-        }
-      });
-    });
-  } else {
-    alert("Veuillez entrer une tâche valide.");
-  }
   localStorage.setItem(task.concat(i), taskText);
   i++;
+  }
+}
+addTaskBtn.addEventListener("click", addTask);
+const getList = function(todoItems){
+  itemList.innerHTML = '';
+
+      todoItems.forEach(function(item){
+          itemList.insertAdjacentHTML('beforeend', `<div class="item my-3"><h5 class="item-name text-capitalize">${item}</h5><div class="item-icons"><a href="#" class="complete-item mx-2 item-icon"><i class="far fa-check-circle"></i></a><a href="#" class="edit-item mx-2 item-icon"><i class="far fa-edit"></i></a><a href="#" class="delete-item item-icon"><i class="far fa-times-circle"></i></a></div></div>` );
+
+          handleItem(item);
+      });
+}
+const removeItem = function(item){
+  console.log(item);
+  const removeIndex = (todoItems.indexOf(item));
+  console.log(removeIndex);
+  todoItems.splice(removeIndex, 1);
 }
