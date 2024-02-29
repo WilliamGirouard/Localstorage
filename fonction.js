@@ -38,29 +38,53 @@ function addTask() {
     listItem.textContent = taskText;
     taskList.appendChild(listItem);
     taskInput.value = "";
-    //Ajout d'un bouton de suppression
-    const deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "Supprimer";
 
+    const doneBtn = document.createElement("img");
+ 
+    doneBtn.setAttribute("src", "../img/icons8-checkmark-50.png");
+    doneBtn.setAttribute('height', '25px');
+    doneBtn.setAttribute('width', '25px');
+ 
+    listItem.appendChild(doneBtn);
+ 
+    doneBtn.addEventListener("click", () => {
+        if(listItem.id == ""){
+            listItem.id = "taskDone"
+        }
+        else(
+            listItem.id = ""
+            )});
+       
+ 
+    const editBtn = document.createElement("img");
+ 
+    editBtn.setAttribute("src", "../img/icons8-edit-file-50.png");
+    editBtn.setAttribute('height', '25px');
+    editBtn.setAttribute('width', '25px');
+ 
+    listItem.appendChild(editBtn);
+ 
+    editBtn.addEventListener("click", () => {
+        taskInput.value = listItem.textContent
+        listItem.remove()
+    });
+ 
+    const deleteBtn = document.createElement("img");
+ 
+    deleteBtn.setAttribute("src", "../img/icons8-delete-60.png");
+    deleteBtn.setAttribute('height', '25px');
+    deleteBtn.setAttribute('width', '25px');
+ 
     listItem.appendChild(deleteBtn);
-
+ 
     deleteBtn.addEventListener("click", () => {
-      listItem.remove();
+ 
+        listItem.remove();
+ 
     });
-    //Ajout d'un bouton de tâche finit
-    const validerBtn = document.createElement("button");
-    validerBtn.textContent = "Tâche fini";
-    listItem.appendChild(validerBtn);
-    //Ajout de l'evenement du bouton finit
-    validerBtn.addEventListener("click", () => {
-      listItem.setAttribute("style", "text-decoration-line: line-through;")
-    });
-    // Création du boutton de modification
-    const modifyBtn = document.createElement("button");
-    modifyBtn.textContent = "Modifier la tâche";
-    listItem.appendChild(modifyBtn);
   localStorage.setItem(task.concat(i), taskText);
   i++;
+  
   }
 }
 addTaskBtn.addEventListener("click", addTask);
@@ -73,9 +97,39 @@ const getList = function(todoItems){
           handleItem(item);
       });
 }
+
 const removeItem = function(item){
   console.log(item);
   const removeIndex = (todoItems.indexOf(item));
   console.log(removeIndex);
   todoItems.splice(removeIndex, 1);
 }
+
+
+function login(event){
+  event.preventDefault();
+  const nomUtilisateurConnexion = document.getElementById("nomUtilisateurConnexion").value;
+  const motPasseConnexion = document.getElementById("motPasseConnexion").value;
+ 
+  const nomUtilisateur = localStorage.getItem("nomUtilisateur");
+  const motPasse = localStorage.getItem("motPasse");
+ 
+  if(nomUtilisateur === nomUtilisateurConnexion && motPasse === motPasseConnexion){
+      window.location.replace("../Accueil.html")
+  }
+  else{
+    alert("Bien tenté HACKER VA !!! 911 is approaching...")
+  }
+}
+ 
+function register(){
+  const nomUtilisateur = document.getElementById("nomUtilisateur").value;
+  const mdp = document.getElementById("motPasse").value;
+  const mdpRepete = document.getElementById("motPasseRepete").value;
+ 
+  if(mdp === mdpRepete){
+    localStorage.setItem("nomUtilisateur", nomUtilisateur)
+    localStorage.setItem("mdp", mdp)
+  }
+  }
+
