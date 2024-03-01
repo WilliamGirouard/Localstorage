@@ -32,6 +32,7 @@ function w3_close() {
 }
 
 function addTask() {
+  
   const taskText = taskInput.value.trim();
   if (taskText !== "") {
     const listItem = document.createElement("li");
@@ -82,14 +83,15 @@ function addTask() {
         listItem.remove();
  
     });
+    
   localStorage.setItem(task.concat(i), taskText);
   i++;
   
   }
 }
 addTaskBtn.addEventListener("click", addTask);
-const getList = function(todoItems){
-  itemList.innerHTML = '';
+    const getList = function(todoItems){
+    itemList.innerHTML = '';
 
       todoItems.forEach(function(item){
           itemList.insertAdjacentHTML('beforeend', `<div class="item my-3"><h5 class="item-name text-capitalize">${item}</h5><div class="item-icons"><a href="#" class="complete-item mx-2 item-icon"><i class="far fa-check-circle"></i></a><a href="#" class="edit-item mx-2 item-icon"><i class="far fa-edit"></i></a><a href="#" class="delete-item item-icon"><i class="far fa-times-circle"></i></a></div></div>` );
@@ -105,31 +107,29 @@ const removeItem = function(item){
   todoItems.splice(removeIndex, 1);
 }
 
-
-function login(event){
-  event.preventDefault();
-  const nomUtilisateurConnexion = document.getElementById("nomUtilisateurConnexion").value;
-  const motPasseConnexion = document.getElementById("motPasseConnexion").value;
- 
-  const nomUtilisateur = localStorage.getItem("nomUtilisateur");
-  const motPasse = localStorage.getItem("motPasse");
- 
-  if(nomUtilisateur === nomUtilisateurConnexion && motPasse === motPasseConnexion){
-      window.location.replace("../Accueil.html")
-  }
-  else{
-    alert("Bien tenté HACKER VA !!! 911 is approaching...")
-  }
-}
- 
 function register(){
   const nomUtilisateur = document.getElementById("nomUtilisateur").value;
   const mdp = document.getElementById("motPasse").value;
   const mdpRepete = document.getElementById("motPasseRepete").value;
  
   if(mdp === mdpRepete){
-    localStorage.setItem("nomUtilisateur", nomUtilisateur)
-    localStorage.setItem("mdp", mdp)
+    localStorage.setItem("nomUtilisateur", nomUtilisateur);
+    localStorage.setItem("mdp", mdp);
   }
+}
+
+function login(event){
+  event.preventDefault();
+  const nomUtilisateurConnexion = document.getElementById("nomUtilisateurConnexion").value;
+  const motPasseConnexion = document.getElementById("motPasseConnexion").value;
+ 
+  const nomUtilisateurStorage = localStorage.getItem("nomUtilisateur");
+  const motPasseStorage = localStorage.getItem("mdp");
+ 
+  if(nomUtilisateurStorage === nomUtilisateurConnexion && motPasseStorage === motPasseConnexion){
+      window.location.replace('/tasklist.html');
   }
+}
+ 
+
 
