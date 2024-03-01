@@ -1,41 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo List</title>
-    <link rel="stylesheet" href="tasklist.css" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  </head>
-  <body>
-    <!-- Sidebar -->
-<div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
-  <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
-  <a href="accueil.html" class="w3-bar-item w3-button">Accueil</a>
-  <a href="tasklist.html" class="w3-bar-item w3-button">Lien 2</a>
-</div>
 
-<!-- Page Content -->
-<div class="w3-teal">
-  <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
-  <div class="w3-container">
-    <h1>Todo tasklist</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo List</title>
+  <link rel="stylesheet" href="tasklist.css" />
+</head>
+
+<body>
+  <div class="center">
+
   </div>
+
+  <!-- Barre Coté -->
+  <div class="area"></div>
+  <nav class="main-menu">
+    <ul>
+      <li>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+          <i class="fa fa-home fa-2x"></i>
+          <span class="nav-text">
+            Accueil
+          </span>
+        </a>
+
+      </li>
+      <li class="has-subnav">
+        <a href="tasklist.html">
+          <i class="fa fa-globe fa-2x"></i>
+          <span class="nav-text">
+            Liste de tâches
+          </span>
+        </a>
+    </ul>
+
+    <ul class="logout">
+      <li>
+        <a href="accueil.html">
+          <i class="fa fa-power-off fa-2x"></i>
+          <span class="nav-text">
+            Se déconnecter
+          </span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</body>
+
+</html>
+
+<!-- Contenu de la page -->
+
+<div class="container">
+  <h1>Ma liste de tâches</h1>
+  <input type="text" id="taskInput" placeholder="Nouvelle tâche..." maxlength="20" />
+  <button id="addTaskBtn">Ajouter</button>
+  <ul id="taskList" style="font-size: 25px;"></ul>
 </div>
-    <div class="container">
-      <h1>Ma liste de tâches</h1>
-      <input
-        type="text"
-        id="taskInput"
-        placeholder="Nouvelle tâche..."
-        maxlength="20"
-      />
-      <button id="addTaskBtn">Ajouter</button>
-      <ul id="taskList"></ul>
-    </div>
-    <script src="javascript/fonction.js"></script>
-    <article></article>
-    <aside></aside>
-    <footer></footer>
-  </body>
+<script src="javascript/fonction.js"></script>
+<script src="https://kit.fontawesome.com/f18e417c39.js" crossorigin="anonymous"></script>
+<article></article>
+<aside></aside>
+<footer></footer>
+</body>
+
 </html>

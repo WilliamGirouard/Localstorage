@@ -7,7 +7,144 @@
     padding-top: 150px;
     padding-left: 100px;
   }
-  
+  /*************************** Background pris d'un CSS TOOL (https://wweb.dev/resources/animated-css-background-generator) ******************************/
+  @keyframes move {
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #3E1E68;
+    overflow: hidden;
+}
+
+.background span {
+    width: 10vmin;
+    height: 10vmin;
+    border-radius: 10vmin;
+    backface-visibility: hidden;
+    position: absolute;
+    animation: move;
+    animation-duration: 42;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+.background span:nth-child(0) {
+    color: #583C87;
+    top: 95%;
+    left: 86%;
+    animation-duration: 84s;
+    animation-delay: -33s;
+    transform-origin: 0vw 20vh;
+    box-shadow: 20vmin 0 3.0222786789308014vmin currentColor;
+}
+.background span:nth-child(1) {
+    color: #583C87;
+    top: 59%;
+    left: 30%;
+    animation-duration: 23s;
+    animation-delay: -62s;
+    transform-origin: 7vw -5vh;
+    box-shadow: -20vmin 0 3.4883594516326495vmin currentColor;
+}
+.background span:nth-child(2) {
+    color: #E45A84;
+    top: 26%;
+    left: 42%;
+    animation-duration: 72s;
+    animation-delay: -64s;
+    transform-origin: -20vw 14vh;
+    box-shadow: 20vmin 0 2.8376426102060464vmin currentColor;
+}
+.background span:nth-child(3) {
+    color: #FFACAC;
+    top: 53%;
+    left: 55%;
+    animation-duration: 6s;
+    animation-delay: -41s;
+    transform-origin: 20vw -3vh;
+    box-shadow: 20vmin 0 3.290888937918991vmin currentColor;
+}
+.background span:nth-child(4) {
+    color: #E45A84;
+    top: 2%;
+    left: 80%;
+    animation-duration: 75s;
+    animation-delay: -60s;
+    transform-origin: -6vw -3vh;
+    box-shadow: -20vmin 0 3.4982994564639993vmin currentColor;
+}
+.background span:nth-child(5) {
+    color: #583C87;
+    top: 97%;
+    left: 75%;
+    animation-duration: 82s;
+    animation-delay: -52s;
+    transform-origin: -16vw 22vh;
+    box-shadow: -20vmin 0 2.6255575303421668vmin currentColor;
+}
+.background span:nth-child(6) {
+    color: #FFACAC;
+    top: 78%;
+    left: 89%;
+    animation-duration: 20s;
+    animation-delay: -35s;
+    transform-origin: 0vw 17vh;
+    box-shadow: -20vmin 0 3.0061733915567137vmin currentColor;
+}
+.background span:nth-child(7) {
+    color: #FFACAC;
+    top: 82%;
+    left: 26%;
+    animation-duration: 74s;
+    animation-delay: -27s;
+    transform-origin: -6vw -4vh;
+    box-shadow: -20vmin 0 2.549357679717874vmin currentColor;
+}
+.background span:nth-child(8) {
+    color: #FFACAC;
+    top: 6%;
+    left: 75%;
+    animation-duration: 82s;
+    animation-delay: -19s;
+    transform-origin: -17vw 11vh;
+    box-shadow: 20vmin 0 3.1464536436959563vmin currentColor;
+}
+.background span:nth-child(9) {
+    color: #583C87;
+    top: 98%;
+    left: 65%;
+    animation-duration: 49s;
+    animation-delay: -25s;
+    transform-origin: 25vw -3vh;
+    box-shadow: 20vmin 0 3.202598110169647vmin currentColor;
+}
+.background span:nth-child(10) {
+    color: #E45A84;
+    top: 36%;
+    left: 44%;
+    animation-duration: 11s;
+    animation-delay: -56s;
+    transform-origin: 15vw 10vh;
+    box-shadow: -20vmin 0 2.655183359064914vmin currentColor;
+}
+.background span:nth-child(11) {
+    color: #E45A84;
+    top: 72%;
+    left: 38%;
+    animation-duration: 48s;
+    animation-delay: -69s;
+    transform-origin: 0vw 7vh;
+    box-shadow: -20vmin 0;
+} 
 /********************************************************** CSS signup *****************************************************/
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
@@ -60,7 +197,6 @@ button:hover {
 
 /* Float cancel and signup buttons and add an equal width */
 .cancelbtn, .signupbtn {
-  float: left;
   width: 50%;
 }
 
@@ -176,7 +312,7 @@ button:hover {
 }
 
 img.avatar {
-  width: 40%;
+  width: 20%;
   border-radius: 50%;
 }
 

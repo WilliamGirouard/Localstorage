@@ -7,6 +7,21 @@
     <link rel="stylesheet" href="accueil.css" />
   </head>
   <body>
+    <!---------------------------------------------<h2>Background animé<h2>----------------------------------------->
+    <div class="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+     </div>
     <div id="divParent">
      <!----------------------------------------- <h2>Formulaire d'inscription</h2> --------------------------------->
      <button id="butInscription" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">S'inscrire</button>
@@ -49,7 +64,7 @@
      <form class="modal-content animate" action="" method="post">
          <div class="imgcontainer">
          <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-         <img src="" alt="Avatar" class="avatar">
+         <img src="img/trudeau-avatar.png" alt="Avatar" class="avatar">
          </div>
  
          <div class="container">
@@ -57,11 +72,8 @@
          <input id="nomUtilisateurConnexion" type="text" placeholder="Saisissez votre nom d'utilisateur" name="nomUtilisateurConnexion" required>
          <label for="motPasseConnexion"><b>Mot de passe</b></label>
          <input id="motPasseConnexion" type="password" placeholder="Entrer le mot de passe" name="motPasseConnexion" required>
-         <!-- <a href="accueil.html">
-             <button type="submit" onclick="window.location.href==accueil.html">Login</button>
-         </a> -->
          </div>
- 
+   <!-----------------------------------------<h2>Bouton de connexion qui amène à la tasklist<h2>-------------------------------------->
          <button id="sub" onclick="login(event)">Se connecter</button>
  
          <label>
