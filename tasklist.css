@@ -1,0 +1,40 @@
+body {
+    margin: auto;
+    background-color: rgb(214, 209, 219);
+    background-repeat: no-repeat;
+    color: black;
+
+}
+.container {
+    margin-top: 5vw;
+    background-color: whitesmoke;
+    margin-left: 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+#taskInput {
+    width: 500px;
+    border: solid 1px;
+    border-radius: 2px;
+}
+#taskInput:hover {
+    border-color: rgb(0, 118, 221);
+}
+#addTaskBtn {
+    color: rgb(255, 255, 255);
+    background-color: rgb(104, 103, 105);
+    border-radius: 10px ;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ul {
+    display:table;
+}
+
+#taskList {
+
+    margin-left: 450px;
+
+}
+#taskDone {
+    color: rgb(119, 0, 255);
+}
