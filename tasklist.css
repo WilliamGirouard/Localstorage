@@ -52,21 +52,55 @@ to {background-position: -100px 0px;background-size:2750px;}
 }
 #taskInput {
     width: 500px;
-    height: 30px;
+    height: 40px;
     border: solid 1px;
-    border-radius: 2px;
-    size: 35px;
+    border-radius: 20px;
+    background: 0%;
+    color: rgb(0, 0, 0);
+    font-family: 'Bangers';
+    font-size: 15px;
 }
 #taskInput:hover {
-    border-color: rgb(0, 118, 221);
+    border-color: rgb(255, 255, 255);
 }
+
+/*Style du bouton pris sur : https://getcssscan.com/css-buttons-examples */ 
 #addTaskBtn {
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
-    height: 30px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    animation: heartbeat 1.5s ease-in-out infinite both;
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #373B44;
+  
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
+
+#addTaskBtn:hover,
+#addTaskBtn:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+#addTaskBtn:active {
+  background: var(--color);
+  color: #fff;
+}
+
+/* Fin du style du bouton d'ajout de tâche */
 ul {
     display:table;
 }
@@ -74,9 +108,11 @@ ul {
 #taskList {
 
     margin-left: 450px;
+    font-family: 'Bangers';
+    font-size: 15px;
 
 }
-#taskDone {
+#checked {
     color: rgb(17, 245, 10);
 }
 

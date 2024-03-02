@@ -158,12 +158,35 @@ input[type=text], input[type=password] {
   border: none;
   background: #f1f1f1;
 }
+/*Style du bouton pris sur : https://getcssscan.com/css-buttons-examples */ 
+#butInscription {
+  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
 
-#butInscription{
-  background-color: #c3cb20;
-  border-color: rgb(90, 80, 80);
-  border-style: solid;
-  border-width: 3px;
+#butInscription:not([disabled]):focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+#butInscription:not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
 }
 
 /* Add a background color when the inputs get focus */
@@ -204,7 +227,6 @@ button:hover {
 .container {
   padding: 16px;
 }
-
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -215,18 +237,18 @@ button:hover {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: #474e5d;
-  padding-top: 50px;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
 }
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
+
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
+  border: 1px solid #000000;
   width: 80%; /* Could be more or less, depending on screen size */
 }
-
 /* Style the horizontal ruler */
 hr {
   border: 1px solid #f1f1f1;
@@ -273,12 +295,35 @@ input[type=text], input[type=password] {
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
+/*Style du bouton pris sur : https://getcssscan.com/css-buttons-examples */ 
+#butConnexion {
+  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
 
-#butConnexion{
-  background-color: #8c9217;
-  border-color: rgb(90, 80, 80);
-  border-style: solid;
-  border-width: 3px;
+#butConnexion:not([disabled]):focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+#butConnexion:not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
 }
 
 /* Set a style for all buttons */
@@ -309,6 +354,7 @@ button:hover {
   text-align: center;
   margin: 24px 0 12px 0;
   position: relative;
+  color: white;
 }
 
 img.avatar {
@@ -338,14 +384,15 @@ span.psw {
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   padding-top: 60px;
+  color: white;
 }
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
+  background-color:#942144;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
+  border-radius: 20px;
 }
 
 /* The Close Button (x) */

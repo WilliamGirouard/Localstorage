@@ -40,26 +40,27 @@ function addTask() {
     taskList.appendChild(listItem);
     taskInput.value = "";
 
-    const doneBtn = document.createElement("img");
+    const doneBtn = document.createElement("i");
  
-    doneBtn.setAttribute("src", "../img/icons8-checkmark-50.png");
+    doneBtn.setAttribute("class", "fa-solid fa-square-check");
     doneBtn.setAttribute('height', '25px');
     doneBtn.setAttribute('width', '25px');
+    doneBtn.setAttribute('margin-left', '20px');
  
     listItem.appendChild(doneBtn);
  
     doneBtn.addEventListener("click", () => {
         if(listItem.id == ""){
-            listItem.id = "taskDone"
+            listItem.id = "checked"
         }
         else(
             listItem.id = ""
             )});
        
  
-    const editBtn = document.createElement("img");
+    const editBtn = document.createElement("i");
  
-    editBtn.setAttribute("src", "../img/icons8-edit-file-50.png");
+    editBtn.setAttribute("class", "fa-solid fa-pen-to-square");
     editBtn.setAttribute('height', '25px');
     editBtn.setAttribute('width', '25px');
  
@@ -70,9 +71,9 @@ function addTask() {
         listItem.remove()
     });
  
-    const deleteBtn = document.createElement("img");
+    const deleteBtn = document.createElement("i");
  
-    deleteBtn.setAttribute("src", "../img/icons8-delete-60.png");
+    deleteBtn.setAttribute("class", "fa-solid fa-trash");
     deleteBtn.setAttribute('height', '25px');
     deleteBtn.setAttribute('width', '25px');
  
