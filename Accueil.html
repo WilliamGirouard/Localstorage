@@ -50,7 +50,7 @@
  
          <div class="clearfix">
              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-             <button type="submit" class="signupbtn" onclick="register()">S'inscrire</button>
+             <button type="submit" class="signupbtn" onclick="inscription()">S'inscrire</button>
          </div>
          </div>
      </form>
@@ -74,13 +74,13 @@
          <input id="motPasseConnexion" type="password" placeholder="Entrer le mot de passe" name="motPasseConnexion" required>
          </div>
    <!-----------------------------------------<h2>Bouton de connexion qui amène à la tasklist<h2>-------------------------------------->
-         <button id="sub" onclick="login(event)">Se connecter</button>
+         <button id="sub" onclick="connexion(event)">Se connecter</button>
  
          <label>
              <input type="checkbox" checked="checked" name="remember"> Souviens-toi de moi
          </label>
          
-         <div class="container">
+         <div class="container" id="connexionform">
              <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Annuler</button>
              <span class="psw">Mot de passe<a href="https://www.youtube.com/watch?v=TnlPtaPxXfc"> oublié?</a></span>  
          </div>

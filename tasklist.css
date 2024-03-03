@@ -43,6 +43,8 @@ to {background-position: -100px 0px;background-size:2750px;}
   border-radius: 3px;
 }
 
+/* Fin du background style */
+
 /* Style de la barre de tâche et l'ajout de tâche avec l'animation de heartbeat pour le bouton */
 .container {
     margin-top: 5vw;
@@ -65,7 +67,7 @@ to {background-position: -100px 0px;background-size:2750px;}
 }
 
 /*Style du bouton pris sur : https://getcssscan.com/css-buttons-examples */ 
-#addTaskBtn {
+#addTaskBtn, #StorageSupression {
   --b: 3px;   /* border thickness */
   --s: .45em; /* size of the corner */
   --color: #373B44;
@@ -87,24 +89,26 @@ to {background-position: -100px 0px;background-size:2750px;}
   -webkit-user-select: none;
   touch-action: manipulation;
 }
-
-#addTaskBtn:hover,
-#addTaskBtn:focus-visible{
+/* Lorsque la souris passe sur le bouton */
+#addTaskBtn:hover, #StorageSupression:hover,
+#addTaskBtn:focus-visible,#StorageSupression:focus-visible {
   --_p: 0px;
   outline-color: var(--color);
   outline-offset: .05em;
 }
 
-#addTaskBtn:active {
+#addTaskBtn:active,#StorageSupression:active {
   background: var(--color);
   color: #fff;
 }
 
 /* Fin du style du bouton d'ajout de tâche */
+
+
 ul {
     display:table;
 }
-
+/* Style de la liste des tâches */
 #taskList {
 
     margin-left: 450px;
@@ -112,10 +116,15 @@ ul {
     font-size: 15px;
 
 }
+/* Style des tâches afficher comme fini */
 #checked {
-    color: rgb(17, 245, 10);
+    color: rgb(9, 107, 6);
 }
-
+/* Rajoute de la marge entre chaque logo de la liste de tâches */
+#taskList i {
+  margin-left: 20px;
+}
+/* Animation dans le style d'un battement de coeur pour les boutons*/
 @keyframes heartbeat {
     from {
       transform: scale(1);

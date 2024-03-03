@@ -411,7 +411,7 @@ span.psw {
   cursor: pointer;
 }
 
-/* Add Zoom Animation */
+/* Animation de Zoom */
 .animate {
   -webkit-animation: animatezoom 0.6s;
   animation: animatezoom 0.6s
@@ -437,7 +437,7 @@ span.psw {
      width: 100%;
   }
 }
-
+/* Animation dans le style d'un battement de coeur pour les boutons*/
 @keyframes heartbeat {
   from {
     transform: scale(1);
