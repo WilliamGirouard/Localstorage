@@ -104,6 +104,90 @@ addTaskBtn.addEventListener("click", addTask);
       });
 }
 
+function Tasklist() {
+  return (
+
+    <><div id="divParent">
+      <div class="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <button id="butInscription" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">S'inscrire</button>
+
+      <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <form class="modal-content" action="">
+          <div class="container">
+            <h1>S'inscrire</h1>
+            <p>Veuillez remplir ce formulaire pour créer un compte.</p>
+            <hr></hr>
+            <label for="nomUtilisateur"><b>Nom d'utilisateur</b></label>
+            <input id="nomUtilisateur" type="text" placeholder="Entrer votre pseudonyme" name="nomUtilisateur" required></input>
+
+            <label for="motPasse"><b>Mot de passe</b></label>
+            <input id="motPasse" type="password" placeholder="Entrer le mot de passe" name="motPasse" required></input>
+
+            <label for="motPasseRepete"><b>Répéter le mot de passe</b></label>
+            <input id="motPasseRepete" type="password" placeholder="Répéter le mot de passe" name="motPasseRepete" required></input>
+
+            <label>
+              <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">Se souvenir de moi</input>
+            </label>
+
+            <p>En créant un compte, vous acceptez nos <a href="#" style="color:dodgerblue">Conditions et confidentialité</a>.</p>
+
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              <button type="submit" class="signupbtn" onclick={inscription()}>S'inscrire</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <button id="butConnexion" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Se connecter</button>
+
+      <div id="id02" class="modal">
+
+        <form class="modal-content animate" action="" method="post">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="trudeau-avatar.png" alt="Avatar" class="avatar"></img>
+          </div>
+
+          <div class="container">
+            <label for="nomUtilisateurConnexion"><b>Nom d'utilisateur</b></label>
+            <input id="nomUtilisateurConnexion" type="text" placeholder="Saisissez votre nom d'utilisateur" name="nomUtilisateurConnexion" required></input>
+            <label for="motPasseConnexion"><b>Mot de passe</b></label>
+            <input id="motPasseConnexion" type="password" placeholder="Entrer le mot de passe" name="motPasseConnexion" required></input>
+          </div>
+
+            <button id="sub" onclick={connexion()}>Se connecter</button>
+
+          <label>
+            <input type="checkbox" checked="checked" name="remember">Souviens-toi de moi</input>
+          </label>
+
+          <div class="container" id="connexionform">
+            <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Annuler</button>
+            <span class="psw">Mot de passe<a href="https://www.youtube.com/watch?v=TnlPtaPxXfc"> oublié?</a></span>
+          </div>
+        </form>
+
+      </div>
+    </div><script src="javascript/fonction.js"></script><link rel="stylesheet" href="accueil.css" /></>
+    );
+  } export default Tasklist;
+
 
 /* Fonction d'inscritpion, prend le pseudo et le mdp et le store dans le storage local*/
 function inscription(){
